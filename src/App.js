@@ -1,10 +1,14 @@
-import React from 'react';
-import Login from './components/Login'
-
+import React from "react";
+import Login from "./components/Login";
+import Messages from "./components/Messages";
+import { Route, Routes } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Login/>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="messages" element={<Messages />} />
+      </Routes>
     </div>
   );
 }
